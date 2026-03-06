@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="default">
+
+    <physics name="physics" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics"/>
+
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster"/>
+    
+    <!-- Gravity but replace this with a hydrodynamic plugin later on-->
+    <gravity>0 0 -9.81</gravity>
+
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 20 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <direction>0 0 -1</direction>
+    </light>
+
+    <scene>
+      <ambient>0.6 0.6 0.6 1</ambient>
+      <background>0.0 0.1 0.2 1</background>
+    </scene>
+
+    <!-- Seabed -->
+    <include>
+      <uri>model://seabed</uri>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <!-- ROV -->
+    <include>
+      <uri>model://uissubsea_rov</uri>
+      <pose>-4 1 4 67.5 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://rock</uri>
+      <name>rock1</name>
+      <pose>-5 5 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://pipeline</uri>
+      <pose>5 0 0 0 0 1.5708</pose>
+    </include>
+
+  </world>
+</sdf>

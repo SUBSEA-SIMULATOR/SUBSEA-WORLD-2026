@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="seabed">
+    <static>true</static>
+
+    <link name="link">
+
+      <!-- Collision -->
+      <collision name="collision">
+        <geometry>
+          <heightmap>
+            <uri>model://seabed/materials/textures/flat_heightmap.png</uri>
+            <size>100 100 1</size>
+            <pos>0 0 0</pos>
+          </heightmap>
+        </geometry>
+      </collision>
+
+      <!-- Visual -->
+      <visual name="visual">
+        <geometry>
+          <heightmap>
+            <uri>model://seabed/materials/textures/flat_heightmap.png</uri>
+            <size>100 100 1</size>
+            <pos>0 0 0</pos>
+
+            <!-- Texture of the sand, change size as needed-->
+            <texture>
+              <diffuse>model://seabed/materials/textures/sand-texture.jpg</diffuse>
+              <normal>model://seabed/materials/textures/sand-texture.jpg</normal>
+              <size>5</size>
+            </texture>
+
+          </heightmap>
+        </geometry>
+      </visual>
+
+    </link>
+  </model>
+</sdf>
