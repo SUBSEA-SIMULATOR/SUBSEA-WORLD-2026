@@ -40,7 +40,7 @@
     <!-- ROV -->
     <include>
       <uri>model://uissubsea_rov</uri>
-      <pose>0 0 0.5 0 0 0</pose>
+      <pose>-4 1 4 67.5 0 0</pose>
     </include>
 
     <include>
