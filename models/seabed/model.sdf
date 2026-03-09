@@ -21,7 +21,7 @@
         <geometry>
           <heightmap>
             <uri>model://seabed/materials/textures/flat_heightmap.png</uri>
-            <size>100 100 1</size>
+            <size>200 100 1</size>
             <pos>0 0 0</pos>
 
             <!-- Texture of the sand, change size as needed-->

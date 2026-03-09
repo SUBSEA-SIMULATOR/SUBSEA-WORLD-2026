@@ -14,6 +14,17 @@
     <plugin
       filename="gz-sim-scene-broadcaster-system"
       name="gz::sim::systems::SceneBroadcaster"/>
+
+    
+    <plugin
+      filename="gz-sim-buoyancy-system"
+      name="gz::sim::systems::Buoyancy">
+
+      <link_name>base_link</link_name>
+      <fluid_density>997</fluid_density>
+      <volume>0.03</volume> <!-- Adjust based on rov mass/buoyancy -->
+
+    </plugin>
     
     <!-- Gravity but replace this with a hydrodynamic plugin later on-->
     <gravity>0 0 -9.81</gravity>
@@ -40,18 +51,12 @@
     <!-- ROV -->
     <include>
       <uri>model://uissubsea_rov</uri>
-      <pose>-4 1 4 67.5 0 0</pose>
-    </include>
-
-    <include>
-      <uri>model://rock</uri>
-      <name>rock1</name>
-      <pose>-5 5 0 0 0 0</pose>
+      <pose>0 0 2 1.5708 0 1.5708</pose>
     </include>
 
     <include>
       <uri>model://pipeline</uri>
-      <pose>5 0 0 0 0 1.5708</pose>
+      <pose>15 0 1 1.5708 0 0</pose>
     </include>
 
   </world>
