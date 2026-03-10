@@ -51,7 +51,13 @@
     <!-- ROV -->
     <include>
       <uri>model://uissubsea_rov</uri>
-      <pose>0 0 2 1.5708 0 1.5708</pose>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://rock</uri>
+      <name>rock1</name>
+      <pose>-5 5 0 0 0 0</pose>
     </include>
 
     <include>
