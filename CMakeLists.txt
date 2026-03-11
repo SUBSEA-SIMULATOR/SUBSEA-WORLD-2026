@@ -28,4 +28,8 @@ install(DIRECTORY src/worlds/
   DESTINATION share/${PROJECT_NAME}/worlds
   FILES_MATCHING PATTERN "*.sdf")
 
+# Install model files
+install(DIRECTORY models/
+  DESTINATION share/${PROJECT_NAME}/models)
+
 ament_package()
